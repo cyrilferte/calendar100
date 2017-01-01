@@ -1,0 +1,38 @@
+<h1>
+
+<% if @usermail == "cyril@fertec.fr" %>
+<div class="container">
+<div class="row">
+    <%= simple_form_for @day, class: "col s12" do |f| %>
+      <div class="row">
+        <div class="input-field col s12">
+            <h3>
+          <%= f.input :title, placeholder: "title", label: "titre" %></h3>
+        </div>
+        <div class="input-field col s12">
+          <%= f.input :progress, placeholder: "Progress", label: "progress" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.input :thought, placeholder: "Thought", label: "Thought" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <%= f.input :link, as: :url, label: "link" %>
+        </div>
+      
+      
+        <div class="input-field col s6">
+          <%= f.input :hub, placeholder: "hub link", label: "hub" %>
+        </div>
+      </div>
+      <%= f.button :submit, "ADD", class: "waves-effect waves-light btn-large btn-block teal" %>
+    <% end %>
+  </div></div></h1>
+  
+  <script>$('.input-field').trigger('autoresize');</script>
+  <% else %>
+  tu n'es pas cyril !
+  <% end %>

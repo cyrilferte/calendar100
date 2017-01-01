@@ -28,14 +28,13 @@
 .navbar-wagon-right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 /* Navbar item */
 .navbar-wagon-item {
   flex: 0 1 auto;
   cursor: pointer;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 /* Navbar standard link */
@@ -128,4 +127,7 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+.navbar-wagon a{
+  margin: 0 20px;
 }
