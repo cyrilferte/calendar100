@@ -1,4 +1,4 @@
-<h1>
+<p>
 
 <% if @usermail == "cyril@fertec.fr" %>
 <div class="container">
@@ -6,16 +6,16 @@
     <%= simple_form_for @day, class: "col s12" do |f| %>
       <div class="row">
         <div class="input-field col s12">
-            <h3>
-          <%= f.input :title, placeholder: "title", label: "titre" %></h3>
+            
+          <%= f.input :title, placeholder: "title" %>
         </div>
         <div class="input-field col s12">
-          <%= f.input :progress, placeholder: "Progress", label: "progress" %>
+          <%= f.input :progress, placeholder: "Progress" %>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <%= f.input :thought, placeholder: "Thought", label: "Thought" %>
+          <%= f.input :thought, placeholder: "Thought" %>
         </div>
       </div>
       <div class="row">
@@ -28,9 +28,9 @@
           <%= f.input :hub, label: "hub link" %>
         </div>
       </div>
-      <%= f.button :submit, "ADD", class: "waves-effect waves-light btn-large btn-block teal" %>
+      <%= f.button :submit, "ADD", class: "waves-effect waves-light teal" %>
     <% end %>
-  </div></div></h1>
+  </div></div></p>
   
   <script>$('.input-field').trigger('autoresize');</script>
   <% else %>
