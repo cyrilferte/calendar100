@@ -3,7 +3,8 @@
     <div class="row">
         <% @days.each do |day| %>
       <div class="col s12 m4 cardy">
-          <div class="cardy">
+       
+       
         <div class="card card-panel teal lighten-<%=rand(3)%>">
             <span class="card-title">Day <%= day.id %> </span>
           <span class="card-content white-text"><h3><%= day.title %></h3>
@@ -14,7 +15,7 @@
          <div class="card-action">
               <a href=http://<%= day.link %>>Show link</a>
               <a href=https://<%= day.hub %>>Github link</a>
-            </div>
+      
       </div>
       </div>
       </div>

@@ -1,43 +1,29 @@
-<div class="navbar-wagon">
-  <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-   <h1>  100 Days of Code</h1>
-  </a>
-
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-
-
-    <!-- Text link -->
-
-      <%= link_to "Contact", "https://twitter.com/ferte_c", class: "navbar-wagon-item navbar-wagon-link" %>
-
-      <% if user_signed_in? %>
-
-    <!-- Profile picture and dropdown -->
-    <div class="navbar-wagon-item">
-    
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li> <%= link_to "log out", destroy_user_session_path, method: :delete %> </li>
-        </ul>
+<nav>
+    <div class="nav-wrapper">
+       <a href="/" class=""><p1>100 Days of Code</p1></a>
+       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+        <li><%= link_to "Contact", "https://twitter.com/ferte_c", class: "" %></li>
+        <% if user_signed_in? %>
+        <li><%= link_to "log out", destroy_user_session_path, method: :delete %></li>
+        <li><a href=/days/new class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a></li>
+        <% else %>
+        <li><%= link_to "Sign UP", new_user_registration_path, class:"waves-effect waves-light btn" %></li>
+        <li><%= link_to " Log in", new_user_session_path, class:"waves-effect waves-light btn" %></li>
+         <% end %>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><%= link_to "Contact", "https://twitter.com/ferte_c", class: "" %></li>
+         <% if user_signed_in? %>
+        <li><%= link_to "log out", destroy_user_session_path, method: :delete %></li>
+        <li><a href=/days/new class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a></li>
+        <% else %>
+        <li><%= link_to "Sign UP", new_user_registration_path, class:"waves-effect waves-light btn" %></li>
+        <li><%= link_to " Log in", new_user_session_path, class:"waves-effect waves-light btn" %></li>
+         <% end %>
+      </ul>
     </div>
-
-    <!-- Button (call-to-action) -->
-
-   
-    <a href=/days/new class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i>
-    </a>
-      <% else %>
-      <%= link_to "Sign UP", new_user_registration_path, class:"waves-effect waves-light btn" %>
-      <%= link_to " Log in", new_user_session_path, class:"waves-effect waves-light btn" %>
-  <% end %>
-
-
-
-
-
-
-</div>
-
-</div>
+  </nav>
+  <script>$(document).ready(function() {
+  $(".button-collapse").sideNav(); 
+});</script>
