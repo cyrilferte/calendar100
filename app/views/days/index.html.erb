@@ -5,14 +5,15 @@
       <div class="col s12 m4 cardy">
        
        
-        <div class="card card-panel teal lighten-<%=rand(3)%>">
+        <div class="card  card-panel teal lighten-<%=rand(3)%>">
             <span class="card-title">Day <%= day.id %> </span>
-          <span class="card-content white-text"><h3><%= day.title %></h3>
+          <div class=" center-item">
+          <span class=" white-text "><h3><%= day.title %></h3>
           <p><%= day.progress %></p><br>
           <p><%= day.thought %></p>
-          </span>
+          </span></div>
         
-         <div class="card-action">
+         <div class="card-action end">
               <a href=http://<%= day.link %>>Show link</a>
               <a href=https://<%= day.hub %>>Github link</a>
       
